@@ -1,6 +1,11 @@
 .contacts {
   &__content {
     @include page-grid;
+    &--left,
+    &--centre,
+    &--right {
+      grid-column: 1 / -1;
+    }
 
     &--left {
       display: grid;
@@ -32,7 +37,10 @@
     }
 
     &--right {
+      margin-top: 48px;
+
       @include on-tablet {
+        margin-top: 0;
         grid-column: 4 / 7;
         grid-row: 1;
       }
@@ -68,7 +76,6 @@
       text-decoration: none;
       display: block;
       white-space: pre-line;
-      margin-top: -35px;
     }
   }
 
@@ -78,14 +85,13 @@
 
     &--row {
       display: grid;
-      grid-template-columns: 2fr;
-      column-gap: 40px;
+      grid-template-columns: 1fr;
+      column-gap: 0;
       align-items: start;
     }
 
     &--input {
       height: 48px;
-      width: 100%;
       font-family: Cinzel, serif;
       font-size: 14px;
       color: #7e7e83;
@@ -93,6 +99,7 @@
       border: 1px solid #e0e0e0;
       outline: none;
       transition: 0.2s ease;
+      padding-left: 16px;
 
       &:hover {
         border-color: #D5D7DE;
@@ -107,6 +114,27 @@
 
     &--textarea {
       height: 144px;
+      resize: none;
+    }
+
+    &--button {
+      height: 56px;
+      background-color: $redcolor;
+      color: $second-text-color;
+      font-family: Cinzel, serif;
+      font-weight: 700;
+      border: none;
+      font-size: 16px;
+      margin-top: 20px;
+      padding: 0;
+
+      &:hover {
+        background-color: #AE1C23;
+      }
+
+      &:active {
+        background-color: #eb343d;
+      }
     }
   }
 }
