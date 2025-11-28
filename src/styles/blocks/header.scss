@@ -41,5 +41,12 @@
     @include on-tablet {
       padding-top: 90px;
     }
+
+    &__phones {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+    }
   }
 }

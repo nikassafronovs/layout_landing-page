@@ -31,7 +31,7 @@
     }
 
     &--figure {
-      object-position: -180px;
+      object-position: right;
 
       @include on-tablet {
         object-position: 0;
